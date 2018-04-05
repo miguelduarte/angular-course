@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/products-list.component';
+import { ConvertToSpacesPipe } from './shared/convert-to-spces.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    ConvertToSpacesPipe
   ],
   imports: [
     BrowserModule,
