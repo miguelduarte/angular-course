@@ -77,7 +77,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.filteredProducts = this.products;
-    this.listFilter='cart';
+    this.listFilter = 'cart';
   }
 
   toggleImage(): void {
@@ -88,5 +88,9 @@ export class ProductListComponent implements OnInit {
     filterBy = filterBy.toLocaleLowerCase();
     return this.products.filter((product: IProduct) =>
       product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1)
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = message;
   }
 }
